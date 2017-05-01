@@ -1,0 +1,27 @@
+David Kang
+Instructions
+
+1. Git clone https://github.com/dkang14/project.git
+
+After cloning the repository, the code should run without installing new libraries (it did on the linux computers in the maclab).
+
+2. Running the code
+
+python main.py “Node.csv” “training” “testing” 10 10 .05
+
+
+Run main.py. The first argument is the path to a list containing the nodes to be analyzed (we have provided “Nodes.csv”). The second arg is the path to the training data; the third arg is the path to the testing data. We have provided a copy of subsets of the data. 
+
+The fourth argument is the user’s choice for the number of nodes in the neural network (we recommend 10 – 20). The fifth argument is the number of training iterations (the more the better, but the program will take longer to run). The sixth argument is the learning rate (0.05 should be fine). 
+
+Since the neural network's initial state is set randomly, running the program twice with the same parameters will always yield slightly different results. 
+
+Input data: The input data is split into two folders: “da” and “rt”. “da” contains the csv files for each date 3/16 – 5/4. Each file contains a list of all the electricity nodes followed by the government’s forecast for the next day’s price for each hour. The “rt” folder contains csv files for 3/17 – 5/5.  Each file contains the actual realized prices that occurred for each node during that day. Comparing the two sets of data reveals the difference between the government’s forecast and the actual prices.
+
+Our program outputs a graph that displays the net profit/loss based on trades made from the program's price predictions, over the course of the testing period. Profit and losses are calculated as follows - when the neural net predicts the future price will be higher than the gov't forecast price, we buy the contract. When the neural net predicts a lower price, we short sell the contract. We do this for each hour and the graph reflects the return on this hypothetical portfolio strategy over time. 
+
+Time is displayed in hours since the first trade, rather than by date. We will likely change this for in our next version of the program. 
+
+
+
+
