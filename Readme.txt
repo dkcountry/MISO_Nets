@@ -1,4 +1,9 @@
-# These are the instructions for compiling the C++ implementation.
+# CS Project for AWS Big Data class at UChicago. Written by David Kang and Qizhen He, 5/1/2013
+This is basic feed forward neural net implemention designed to making trading decisions on the MISO electricity data. Our goal was to forecast future price changes based on a variety of current-time inputs - including current day prices, relationships between locations (nodes), and time. Due to the volume of data, we were eventually required to re-implement in C++ and parallelize the program in AWS 
+
+
+
+#The following are the instructions for compiling the C++ implementation.
 
 Separate instructions for running the python version can be found in the prototype folder.
 
